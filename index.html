@@ -6,7 +6,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="manifest" href="manifest.json">
-    <title>44VBA</title>
+    <title>VBA</title>
 
 </head>
 
@@ -56,8 +56,6 @@
             border-radius: 50%;
             display: inline-block;
         }
-
-
         .vk {
             color: rgba(0, 0, 0, 0.2);
             background-color: rgba(255, 255, 255, 0.25);
@@ -65,6 +63,7 @@
             z-index: 1;
             text-align: center;
             vertical-align: middle;
+            border-radius: 2.5% !important;
             display: inline-block;
         }
 
@@ -84,6 +83,7 @@
             width: 100vw;
             height: 100vh;
             z-index: 999;
+            border-radius: 2.5% !important;
         }
 
         #gba-canvas {
@@ -133,17 +133,8 @@
         <button onclick="savBackupBtn()">Backup</button>
         <input type="file" id="sav-file" />
         <button onclick="savRestoreBtn()">Restore</button>
-    </div>
-
+   </div>
     <div id="welcome" class="menu">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="/emulators/">Emulators</a></li>
-                <li class="breadcrumb-item active" aria-current="page">VBA</li>
-            </ol>
-        </nav>
-
         <h2>VBA - A GBA Emulator</h2>
         <hr>
         <div id="wasm-loading">
@@ -152,7 +143,7 @@
        <div id="select-rom" hidden>
             <p>Select a game to start with:</p>
             <select style="padding:.5em; border:2px" onchange="onHomebrewListSelected()" id="homebrew-list">
-                <option value="">Games</option>
+                <option value="">Pre-downloaded Games</option>
                 <option value="emerald">Pokémon Emerald</option>
                 <option value="firered">Pokémon FireRed</option>
                 <option value="leafgreen">Pokémon LeafGreen</option>
@@ -160,7 +151,7 @@
                 <option value="saphhire">Pokémon Saphhire</option>
             </select> 
 
-            <p>choose your own file:<br><input style="padding:.5em; border:2px solid white;" type="file" id="romFile"
+            <p>Or, you can choose your own file:<br><input style="padding:.5em; border:2px solid white;" type="file" id="romFile"
                     onchange="onFileSelected()" /></p>
 
         </div>
@@ -216,7 +207,6 @@
                 // On iOS Safari, the indexedDB will be cleared after 7 days. 
                 // To prevent users from frustration, we don't allow savegaming on iOS unless the we are in the PWA mode.
                 isSaveSupported = false
-                alert('Due to limitations of iOS, please add this page to the home screen and launch it from the home screen icon to enable features including savegame and full screen.')
                 var divIosHint = document.getElementById('ios-hint')
                 divIosHint.hidden = false
                 divIosHint.style = 'position: absolute; bottom: ' + divIosHint.clientHeight + 'px;'
