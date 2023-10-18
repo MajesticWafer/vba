@@ -1,25 +1,13 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-134HXE8JTB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-134HXE8JTB');
-</script>
-<script async src="https://arc.io/widget.min.js#uM9wC8nd"></script>
-<!-- Arc -->
+<!DOCTYPE html><html lang="en"><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="favicon.ico" />
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
-    <link href="/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <title>VBA</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <title>44VBA</title>
+
 </head>
 
 <body>
@@ -41,13 +29,14 @@
         }
 
         body {
-            background-color: rgb(35, 39, 42);
+
+            background-color: #000000;
             color: #FFFFFF;
             padding: 0;
             margin: 0;
             width: 100vw;
             height: 100vh;
-            font-family: 'Ubuntu Mono', monospace;
+            font-family: 'Myriad Set Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
         hr {
@@ -68,9 +57,10 @@
             display: inline-block;
         }
 
+
         .vk {
-            color: white;
-            background-color: rgba(35, 39, 42, 1);
+            color: rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.25);
             position: absolute;
             z-index: 1;
             text-align: center;
@@ -83,25 +73,22 @@
         }
 
         .vk-touched {
-            background-color: white !important
+            background-color: rgba(255, 255, 255, 0.75) !important
         }
 
         .menu {
-            background: rgb(35, 39, 42);
+            background: rgb(32, 43, 56);
             position: absolute;
-            overflow: hidden scroll;
             left: 0;
             top: 0;
             width: 100vw;
             height: 100vh;
             z-index: 999;
-            margin: 8px;
         }
 
         #gba-canvas {
             position: absolute;
             z-index: -1;
-            image-rendering: pixelated;
         }
 
         #vk-layer {
@@ -121,6 +108,18 @@
             top: 40vh;
             background: rgba(0, 0, 0, 0.5);
             z-index: 2;
+        }
+
+        textarea {
+            background: transparent;
+            color: #fff;
+            border: 2px solid white;
+
+        }
+
+        /* textarea placeholder */
+        textarea::placeholder {
+            color: #666;
         }
     </style>
     <div id="pause-menu" class="menu" style="background: rgba(32,43,56,0.7);" hidden>
