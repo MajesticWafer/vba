@@ -53,7 +53,7 @@
         .vk-round {
             text-align: center;
             vertical-align: middle;
-            border-radius: 50%;
+            border-radius: 50% !important;
             display: inline-block;
         }
         .vk {
@@ -63,7 +63,7 @@
             z-index: 1;
             text-align: center;
             vertical-align: middle;
-            border-radius: 2.5% !important;
+            border-radius: 2.5%;
             display: inline-block;
         }
 
@@ -89,6 +89,7 @@
         #gba-canvas {
             position: absolute;
             z-index: -1;
+            image-rendering: pixelated;
         }
 
         #vk-layer {
@@ -172,8 +173,8 @@
         <div class="vk-rect vk" data-k="r">R</div>
         <div class="vk-round vk" data-k="a">A</div>
         <div class="vk-round vk" data-k="b">B</div>
-        <div class="vk-rect vk" data-k="select">Select</div>
-        <div class="vk-rect vk" data-k="start">Start</div>
+        <div class="vk-rect vk" data-k="select">-</div>
+        <div class="vk-rect vk" data-k="start">+</div>
         <div class=" vk" data-k="left">←</div>
         <div class=" vk" data-k="right">→</div>
         <div class=" vk" data-k="up">↑</div>
